@@ -8,7 +8,15 @@ var inicio = {
     iniciarJuego: function(){
         console.log("Equisdé");
         dimensiones.iniciar();
-        var r = new Rectangulo(10 , 10 , 100 , 100);
+        inicio.recargarTiles();
         cicloPrincipal.iterar();
+    },
+    recargarTiles: function(){
+        document.getElementById("juego").innerHTML = "";
+        for (var y=0; y < dimensiones.obtenerTilesVerticales(); y++){
+            for (var x=0; x < dimensiones.obtenerTilesHorizontales(); x++){
+                var r = new Rectangulo(x * dimensiones.ladoTiles,y * dimensiones.ladoTiles,dimensiones.ladoTiles,dimensiones.ladoTiles);
+            }
+        }
     }
 };

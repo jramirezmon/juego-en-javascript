@@ -4,6 +4,7 @@ function Rectangulo(x,y,ancho,alto){
     this.alto = alto;
     this.ancho = ancho;
     this.id = "r" + x + y;
+    this.insertarDOM();
 }
 
 Rectangulo.prototype.insertarDOM = function(){
